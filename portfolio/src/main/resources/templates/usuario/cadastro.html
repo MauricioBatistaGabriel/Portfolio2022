@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/usuario/cadastro.css">
+  <title>Portfolio</title>
+</head>
+<body>
+
+<div class="container">
+
+  <form action="/usuario/cadastro" method="post" th:object="${CadastraUsuario}">
+
+    <div>
+      <input type="text" th:field="*{nome}" placeholder="Nome">
+    </div>
+
+    <div>
+      <input type="email" th:field="*{email}" required placeholder="Email">
+    </div>
+
+    <div>
+      <input type="password" th:field="*{senha}" required placeholder="Senha">
+    </div>
+
+    <button type="submit" >Cadastrar</button>
+
+
+  </form>
+
+  <a href="/usuario/login">Ir para Login</a>
+
+</div>
+
+</body>
+</html>
